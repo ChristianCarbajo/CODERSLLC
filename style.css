@@ -1,4 +1,4 @@
-header {
+  header {
     background-color: #ff7f99;
     width: auto;
     height: 8%;
@@ -39,4 +39,41 @@ header {
     font-weight: 300;
     font-family: 'Courier New', Courier, monospace;
     padding: 60px;
+}
+.portada {
+    justify-content: space-between;
+    display: flex ;
+    flex-direction: row;
+    align-items: center; 
+}
+main .container {
+    padding-left: 5%;
+    width: 50%;
+    height: 100%;
+}
+
+.container h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ff7f99;
+}
+
+.team {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    background-color: #ff7f99;
+    height: auto;
+    padding-top: 3%;
+}
+
+.team .dev .icon {
+    width: 30px; 
+    height: auto;
+}
+
+.dev {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+    justify-content: space-evenly;
 }
