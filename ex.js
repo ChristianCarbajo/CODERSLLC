@@ -4,18 +4,38 @@ var btn = document.getElementById("myBtn1");
 
 var span = document.getElementsByClassName("close1")[0];
 
-btn.onclick = function() {
+
+/*btn.onclick = function() {
     modal.style.display = "block";
+    
 }
 
 span.onclick = function() {
     modal.style.display = "none";
 }
 
+
 window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
+}*/
+
+//primero que el scrip está colocado en mal en el html. Estaba fuera del html cuando tiene que estar dentro.
+//Toda la función puede resumirse en codigo muy simple sin
+//condicionales
+
+
+function aparecer() {
+    modal.style.display="block"; 
+}
+
+btn.onclick = function() {
+    aparecer();
+}
+
+modal.onclick = function ocultar(){
+    modal.style.display=("none");
 }
 
 

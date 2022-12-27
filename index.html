@@ -6,8 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CODERS LLC</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        var $ = {
+           enabled: false,
+           tmp: Array(),
+           _konamiCode: Array(65,66,39,37,39,37,40,40,38,38),
+           init: function() {
+             this.tmp = Array(65,66,39,37,39,37,40,40,38,38);
+           },
+           konamiCode: function(e) {
+             if(!this.enabled) {
+               var t = this.tmp.pop();
+               if((e.keyCode-t) == 0) {
+                 if(this.tmp.length == 0) {
+                   this.enabled = true;
+                 }
+               }
+               else {
+                 this.init();
+               }
+             }
+             else {
+               this.action();
+             }
+           },
+           // Cambiamos por nuestra funcionalidad.
+           action: function alerta() {
+             alert("Mañana Christian elige canción para empezar el día");
+           }
+         }
+    </script>
 </head>
-<body>
+<body onload="$.init()" onkeydown="$.konamiCode(event)">
     <header>
         <div class="logo">
             <a href="index.html">Coders<p>LLC</p></a> 
@@ -19,7 +49,6 @@
             <a href="">Contáctanos</a>
         </div>
     </header>
-
     <main>
         <section class="portada">
             <div class="container"> <img src="IMG/Team1.PNG" alt=""> </div>
@@ -29,7 +58,7 @@
         <section class="team">
             <div class="dev">
                 <a id="myBtn1" class="dev-user"><img  src="IMG/1.png" width="200px" height="200px" alt="Adrian"></a>
-                <div id="myModal1" class="modal">
+                <div id="myModal1" class="modal"  >
                     <div class="modal-content">
                         <span class="close1">&times;</span>
                         <div class="dev-image"><img src="IMG/1.png" width="400px" height="400px" alt=""></div>
@@ -53,7 +82,7 @@
                 </div>
             </div>
     
-    
+            
     
     
             <div class="dev">
@@ -146,8 +175,8 @@
     </main>
 
 </body>
+<script src="ex.js"></script> 
 </html>
 
 
-
-<script src="ex.js"></script>
+<!--<script src="ex.js"></script>-->
